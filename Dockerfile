@@ -1,14 +1,14 @@
-# Usa la imagen oficial de nginx, ligera y preparada para servir estáticos
 FROM nginx:alpine
 
-# Borra la configuración por defecto de nginx (opcional)
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copia tu folder public/ en la carpeta que nginx sirve
+# Copia tu carpeta public/ en la carpeta de contenido web de Nginx
 COPY public/ /usr/share/nginx/html
 
-# Expone el puerto 80
-EXPOSE 80
+# Mantén la configuración por defecto de Nginx (no borramos nada)
+# El contenedor nginx:alpine ya expone el puerto 80 y tiene el CMD correcto.
 
-# Arranca nginx en primer plano
-CMD ["nginx", "-g", "daemon off;"]
+# (opcional) si quieres ver logs limpios:
+# RUN rm -rf /var/cache/apk/*
+
+# El CMD por defecto de la imagen nginx:alpine es:
+# CMD ["nginx", "-g", "daemon off;"]
+
