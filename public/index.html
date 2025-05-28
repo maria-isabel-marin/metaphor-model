@@ -1,131 +1,242 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MetaphorModel – Proyecto MELT</title>
+  <title>AI-Driven Metaphor Field-Loop Theory</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    :root {
+      --primary: #00264d;
+      --secondary: #004080;
+      --light-bg: #f9f9f9;
+      --dark-text: #222;
+      --muted-text: #555;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
     }
 
     header {
-      background-color: #00264d;
-      color: white;
-      width: 100%;
-      padding: 2rem 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      margin: 0.5rem 0 0;
       font-size: 1.1rem;
-      opacity: 0.8;
+      opacity: 0.85;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: var(--secondary);
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+
+    .intro {
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .modules {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 2rem;
-      width: 280px;
-      transition: transform 0.2s ease;
-    }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.8rem;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centra horizontalmente */
+    text-align: center;       /* Centra el texto */
+    transition: transform 0.2s ease;
+  }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+    .card:hover { transform: translateY(-4px); }
 
     .card h2 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
       font-size: 1.4rem;
-      margin-bottom: 1rem;
     }
 
     .card p {
       font-size: 0.95rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--muted-text);
     }
 
     .card a {
       display: inline-block;
       padding: 0.6rem 1.2rem;
-      background-color: #004080;
-      color: white;
+      background: var(--secondary);
+      color: #fff;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .papers, .credits {
+      margin-bottom: 3rem;
+    }
+
+    .papers h2, .credits h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .papers ul {
+      list-style: disc inside;
+      color: var(--muted-text);
+    }
+
+    .papers li {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .papers a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    .credits p {
+      font-size: 0.95rem;
+      color: var(--muted-text);
+      margin-bottom: 0.5rem;
     }
 
     footer {
-      margin-top: 3rem;
-      padding: 1rem;
+      text-align: center;
+      padding: 1.5rem 0;
       font-size: 0.85rem;
-      color: #777;
+      color: var(--muted-text);
+      border-top: 1px solid #ddd;
     }
 
     @media (max-width: 600px) {
-      .modules {
-        flex-direction: column;
-      }
+      .modules { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>MetaphorModel</h1>
-    <p>Una plataforma para la teoría y el procesamiento de metáforas – Proyecto MELT</p>
+    <h1>AI-Driven Metaphor Field-Loop Theory</h1>
+    <p>
+      An integrated platform—resulting from PhD research—to register, analyze and explore cultural metaphors at scale.
+    </p>
   </header>
 
+  <nav>
+    <a href="#manager">Metaphor Manager</a>
+    <a href="#processing">MELT Processing</a>
+    <a href="#corpus">Research Corpus</a>
+  </nav>
+
   <main>
-    <p>Bienvenido a la página central del proyecto <strong>Metaphor Field-Loop Theory</strong> (MELT). Aquí puedes explorar los módulos para gestionar y analizar metáforas cognitivas y conceptuales.</p>
 
-    <div class="modules">
+    <section class="intro">
+      <p>
+        This application supports the thesis question:  
+        <em>“Can an AI-enabled system help us understand how cultural narratives are configured, and how do they prime social mobilization?”</em>
+      </p>
+      <p>
+        Built on Metaphor Field-Loop Theory (Valdivia, 2019) and powered by natural language processing.
+      </p>
+    </section>
+
+    <section id="manager" class="modules">
       <div class="card">
-        <h2>Gestión de Metáforas</h2>
-        <p>Registra, organiza y revisa expresiones metafóricas en corpus documentales.</p>
-        <a href="https://manager.metaphormodel.org" target="_blank">Ir al Gestor</a>
+        <h2>Metaphor Manager</h2>
+        <p>Register, organize and review metaphorical expressions from multiple corpora.</p>
+        <a href="https://manager.metaphormodel.org" target="_blank">Go to Manager</a>
       </div>
-
       <div class="card">
-        <h2>Procesamiento AI-MELT</h2>
-        <p>Explora el procesamiento automático de metáforas mediante IA y modelos de lenguaje.</p>
-        <a href="https://ai.metaphormodel.org" target="_blank">Ir al Módulo AI</a>
+        <h2>MELT Processing</h2>
+        <p>Compute metaphor detection and analysis via Metaphor Field-Loop Theory.</p>
+        <a href="https://ai.metaphormodel.org" target="_blank">Go to Processing</a>
       </div>
-    </div>
+      <div class="card">
+        <h2>Research Corpus</h2>
+        <p>Explore the Colombian Truth Commission report used as a test case.</p>
+        <a href="https://corpus.metaphormodel.org" target="_blank">View Corpus</a>
+      </div>
+    </section>
 
-    <footer>
-      Proyecto financiado por [nombre de la entidad]. Teoría desarrollada por Kalma2 en el marco de su tesis doctoral.
-    </footer>
+    <section class="papers">
+      <h2>Previous MELT Model Applications</h2>
+      <p>For previous applications of the MELT model, you can review the following publications:</p>
+      <ul>
+        <li>
+          Valdivia, P. (2019). <strong>Narrating Crises and Populism in Southern Europe: A Cognitive and Cultural Approach to Discourse.</strong><br/>
+          John Benjamins Publishing Company.  
+          <a href="https://doi.org/10.1177/0047244119865083" target="_blank">https://doi.org/10.1177/0047244119865083</a>
+        </li>
+        <li>
+          Valdivia Milla, P., & Valdivia Martín, A. (2023). <strong>Conflictive cultural narratives in the collective memory of Spain’s political transition.</strong><br/>
+          In <em>Cultural Narratives in the 21st Century</em> (pp. 45–69). De Gruyter.  
+          <a href="https://doi.org/10.1515/9783110707793-003" target="_blank">https://doi.org/10.1515/9783110707793-003</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="credits">
+      <h2>Project & Funding</h2>
+      <p>
+        Developed by María Isabel Marín Morales under the supervision of Prof. Dr. Pablo Valdivia.
+      </p>
+      <p>
+        Graduate School for the Humanities - University of Groningen.
+      </p>
+      <p>
+        Funded by Convocatoria 906/2021 of the Colombian Ministry of Science, Technology & Innovation  
+        (<a href="https://minciencias.gov.co/" target="_blank">minciencias.gov.co</a>).
+      </p>
+    </section>
+
   </main>
+
+  <footer>
+    © 2025 AI-Driven Metaphor Field-Loop Theory. All rights reserved.  
+    
+  </footer>
 
 </body>
 </html>
