@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you refer to this repository in academic work, please cite it as below."
+title: "metaphor-model: Shared conceptual and data model for MetaphorModel.org"
+abstract: >-
+  Shared conceptual and data model for the MetaphorModel.org research
+  software ecosystem. Defines the vocabulary, entities, and
+  relationships used by the ecosystem's components to describe,
+  annotate, and process conceptual metaphors and cultural narratives in
+  textual corpora. Developed as part of doctoral research at the
+  Graduate School for the Humanities, University of Groningen.
+type: software
+authors:
+  - family-names: "Marín Morales"
+    given-names: "María Isabel"
+    affiliation: "Graduate School for the Humanities, University of Groningen"
+repository-code: "https://github.com/MetaphorModel/metaphor-model"
+url: "https://metaphormodel.org"
+version: "work-in-progress"
+keywords:
+  - conceptual metaphor
+  - cultural narratives
+  - metaphor field-loop theory
+  - digital humanities
+  - research software
+  - shared data model
