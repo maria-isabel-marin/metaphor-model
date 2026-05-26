@@ -5,13 +5,12 @@ This document records the FAIR and Open Science orientation of
 into account, and the sustainability goals that guide how the modelling
 layer is maintained.
 
-It describes **goals and current practice**, not certifications. Where
-something is aspirational, it is marked as such.
+It describes **goals and current practice**.
 
 ## FAIR orientation
 
 The FAIR principles — Findable, Accessible, Interoperable, Reusable —
-are taken as a working orientation rather than a checklist. Concretely:
+are taken as a working orientation, concretely:
 
 - **Findable.** The repository documents what `metaphor-model` is and
   how it fits into MetaphorModel.org, so that researchers who land on
@@ -36,9 +35,8 @@ The model layer supports reproducibility of the wider research by:
 - making the conceptual commitments of the analysis explicit, so that
   a reader can tell *what* was modelled and *how*;
 - treating annotation **provenance and review information** as part of
-  the model rather than as a back-end implementation detail, so that
-  every analytical claim can be traced to who produced it, when, and
-  with which tool or model;
+  the model, so that every analytical claim can be traced to who produced
+  it, when, and with which tool or model;
 - versioning the documentation through git history, so that changes to
   the model are inspectable over time.
 
@@ -73,14 +71,13 @@ This has consequences for the modelling layer:
   stays inspectable and versioned.
 - Conceptual decisions are written down in [`schema-overview.md`](schema-overview.md);
   architectural decisions in [`architecture.md`](architecture.md).
-- Open modelling questions are recorded explicitly rather than left
-  implicit, so that future contributors know where the model is firm
-  and where it is still settling.
+- Open modelling questions are recorded explicitly, so that future 
+  contributors know where the model is firm and where it is still settling.
 
 ## Sustainability goals
 
 `metaphor-model` is doctoral research software. Its sustainability
-plan is modest and honest:
+plan is:
 
 - Maintain a clear **separation between model, data, processing, and
   interface layers** so that any one of them can evolve without
